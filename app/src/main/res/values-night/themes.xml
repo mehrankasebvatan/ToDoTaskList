@@ -12,6 +12,11 @@
         <item name="android:windowBackground">@color/black</item>
     </style>
 
+    <style name="inputStyle" parent="ThemeOverlay.Material3.TextInputEditText">
+        <item name="drawableTint">@color/white</item>
+    </style>
+
+
 
     <style name="myCV" parent="Widget.Material3.CardView.Filled">
         <item name="cardBackgroundColor">@color/grayDark</item>

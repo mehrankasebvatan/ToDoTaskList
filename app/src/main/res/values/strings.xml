@@ -3,4 +3,6 @@
     <string name="no_data_found">No Data Found!</string>
     <string name="add_new_task">Add New Task</string>
     <string name="new_task">New Task</string>
+    <string name="delete">Delete</string>
+    <string name="search">search ...</string>
 </resources>

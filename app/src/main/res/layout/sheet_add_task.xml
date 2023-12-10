@@ -29,7 +29,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/primary"
+        android:background="@color/green"
         android:gravity="center"
         android:paddingTop="10dp"
         android:id="@+id/tvAdd"

@@ -6,5 +6,7 @@
     <color name="primary">#FF8080</color>
     <color name="secondary">#BEADFA</color>
     <color name="grayDark">#242424</color>
+    <color name="red">#EF4B4B</color>
+    <color name="green">#618264</color>
 
 </resources>

@@ -13,6 +13,10 @@
     </style>
 
 
+    <style name="inputStyle" parent="ThemeOverlay.Material3.TextInputEditText">
+        <item name="drawableTint">@color/black</item>
+    </style>
+
     <style name="myCV" parent="Widget.Material3.CardView.Filled">
         <item name="cardBackgroundColor">@color/white</item>
         <item name="cardCornerRadius">15dp</item>

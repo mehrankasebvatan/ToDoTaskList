@@ -1,6 +1,5 @@
 package ir.mkv.todotasklist
 
-import android.media.tv.TvView
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +9,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
-class AddTaskSheet : BottomSheetDialogFragment() {
+class AddTaskSheet(val data: TaskModel?) : BottomSheetDialogFragment() {
     private var callback: ((TaskModel) -> Unit)? = null
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,14 +26,18 @@ class AddTaskSheet : BottomSheetDialogFragment() {
         val inputTask: TextInputEditText = view.findViewById(R.id.inputTask)
         val tvAdd: TextView = view.findViewById(R.id.tvAdd)
 
+
+        if (data != null) inputTask.setText(data.title)
+
         tvAdd.setOnClickListener {
             if (inputTask.text.toString().isEmpty()) {
                 loTask.error = "Enter Your New Task!"
             } else {
                 val taskModel = TaskModel(
                     title = inputTask.text.toString(),
-                    isCompleted = false,
-                    id = 0
+                    isCompleted = data?.isCompleted ?: false,
+                    id = data?.id ?: 0,
+                    dateTime = ""
                 )
                 callback?.invoke(taskModel)
             }
